@@ -1,0 +1,21 @@
+<app-heroes></app-heroes>
+<app-home></app-home>
+
+<table border=1>
+<!-- Notice the colSpan property is camel case -->
+<!-- colspan和colSpan?? -->
+<tr><td [colSpan]="1 + 1">Three-Four</td></tr>
+<tr><td [attr.colspan]="1 + 1 + 1">One-Two</td><td>1111</td></tr>
+<tr><td colSpan=2>One-Two</td><td>1111</td></tr>
+<tr><td colspan=2>One-Two</td><td>1111</td></tr>
+<!--  expression calculates colspan=2 -->
+<!-- 当元素没有属性可绑的时候，就必须使用 attribute 绑定 -->
+
+
+</table>
+
+<!-- Bind button disabled state to `isUnchanged` property -->
+<button type="button" [disabled]="isUnchanged">Disabled Button</button>
+<!-- create and set an aria attribute for assistive technology -->
+<button type="button" [attr.aria-label]="actionName">{{actionName}} with Aria</button>
+
