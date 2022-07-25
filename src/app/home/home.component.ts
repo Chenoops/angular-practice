@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 //
-import { ListService } from '../serves/list.service';
+// import { ListService } from '../serves/list.service';
 
 @Component({
   selector: 'app-home',
@@ -11,11 +11,13 @@ import { ListService } from '../serves/list.service';
 })
 export class HomeComponent implements OnInit {
 // 这个构造函数要求注入一个ListService类的实例，并把它存到名为ListService的私有属性中。
-  constructor(private listService : ListService) { }
-
+  // constructor(private listService : ListService) { }
+  constructor() { }
+  list: Array<string> | undefined
   ngOnInit(): void {
-    console.log(this.listService);
-
+    // this.list=this.listService.getList()
   }
-
+  addGit() {
+    // this.listService.addList('Git')
+  }
 }

@@ -1,0 +1,11 @@
+<p>first works!</p>
+
+<app-heroes #weatherName [hero]="weather" (addList1)="addListFun($event)"></app-heroes>
+<p *ngFor="let item of weather">first-{{item}}</p>
+<button (click)="addFun()">添加(first调用子组件heroes)</button>
+
+<!-- 子路由 -->
+<a routerLink="['/heros']"></a>
+<router-outlet></router-outlet>
+
+ 

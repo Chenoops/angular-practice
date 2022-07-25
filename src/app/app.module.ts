@@ -10,20 +10,28 @@ import { HeroesComponent } from './heroes/heroes.component';
 // ListService自动生成的命名
 import { ListService } from './serves/list.service';
 import { HomeComponent } from './home/home.component';
+import { FirstComponent } from './first/first.component';
+import { SecondComponent } from './second/second.component';
+//
+import {UserModule} from './user/user.module'
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroesComponent,
-    HomeComponent
+    HomeComponent,
+    FirstComponent,
+    SecondComponent
   ],
   // 声明组件需要的模块
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    //
+    UserModule
   ],
   //
   providers: [ListService],

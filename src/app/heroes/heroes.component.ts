@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
-
+import { Input } from '@angular/core';
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -25,12 +25,13 @@ export class HeroesComponent implements OnInit {
 
   constructor() {}
   box='hello'
-  name: string = 'www'
+  name: string = 'aaa'
   isActive=true
   currentItem: number=3
   colors: Array<string> = ['red','orange','pink','green']
   title: string = ''
   age: FormControl= new FormControl('')
+  dateStr:Date = new Date()
   // e要指明类型
   clickFun(e:Event) {
     console.log(e);
@@ -52,5 +53,11 @@ export class HeroesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
+  @Input() hero! : Array<string>
+  // @Input('master') masterName = '';
+  // 子组件的 EventEmitter 属性是一个输出属性，通常带有@Output 装饰器
+  @Output() addList1 = new EventEmitter()
+  addBtnFun() {
+    this.addList1.emit('rainy')
+  }
 }

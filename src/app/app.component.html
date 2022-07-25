@@ -1,6 +1,4 @@
-<app-heroes></app-heroes>
 <app-home></app-home>
-
 <table border=1>
 <!-- Notice the colSpan property is camel case -->
 <!-- colspan和colSpan?? -->
@@ -18,4 +16,18 @@
 <button type="button" [disabled]="isUnchanged">Disabled Button</button>
 <!-- create and set an aria attribute for assistive technology -->
 <button type="button" [attr.aria-label]="actionName">{{actionName}} with Aria</button>
+
+
+<div>*****************</div>
+<h1>Angular Router App</h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+  <ul>
+    <li><a routerLink="/first-component" routerLinkActive="active" ariaCurrentWhenActive="page" [queryParams]="{id:1,name:'MyFirst'}">First Component</a></li>
+    <li><a [routerLink]="['/second-component','22']" routerLinkActive="active" ariaCurrentWhenActive="page">Second Component</a></li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
+
 
