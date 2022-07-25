@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: npm i
 
-      - name: Build Stories
+      - name: Build
         run: npm run build -- --base-href /angular-practice/
 
       - name: Add misc files
