@@ -1,1 +1,5 @@
 <p>second works!</p>
+<!-- Object is possibly 'null'. -->
+<div>{{(todos$ | async)?.id}}</div>
+<!-- <div>{{todos$ | async | json}}</div> -->
+<div><code>observable|async</code>: Time: {{ time | async }}</div>
