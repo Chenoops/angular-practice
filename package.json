@@ -6,7 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "vitest"
   },
   "private": true,
   "dependencies": {
@@ -33,6 +33,9 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.7.2"
+    "tsx": "^3.8.0",
+    "typescript": "~4.7.2",
+    "unplugin-auto-import": "^0.10.1",
+    "vitest": "^0.19.1"
   }
 }
