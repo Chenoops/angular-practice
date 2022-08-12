@@ -1,0 +1,12 @@
+.heroes {
+  list-style-type: none;
+}
+
+.heroes button {
+  margin: .5em;
+}
+
+/* .heroes button.selected {
+  background-color: black;
+  color: white;
+} */

@@ -2,6 +2,8 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    // This module is declared with using 'export =', and can only be used with a default import when using the 'allowSyntheticDefaultImports' flag.
+    "allowSyntheticDefaultImports": true,
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -24,7 +26,11 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    //'stickyCssClass' is defined as a property in class 'CdkTable<T>', but is overridden here in 'TableComponent<T>' as an accessor.
+    "skipLibCheck": true,
+    // ？？？？？？？
+    // "esModuleInterop": true,
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

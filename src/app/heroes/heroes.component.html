@@ -45,3 +45,6 @@ age:<input type="text" [formControl]="age">
 <!-- 组件交互 -->
 <div *ngFor="let hero of hero">hero-{{hero}}</div>
 <button (click)="addBtnFun()">添加天气</button>
+<!-- 单插槽内容投影 -->
+<h1>单插槽内容投影</h1>
+<ng-content #name></ng-content>

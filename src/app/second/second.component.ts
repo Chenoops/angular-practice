@@ -85,23 +85,6 @@ const g = fromEvent(document,'click')
 const gEx = g.pipe(mapTo('Good Morning'))
 const gSub = gEx.subscribe(console.log)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @Component({
   selector: 'app-second',
   templateUrl: './second.component.html',

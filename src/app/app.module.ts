@@ -13,7 +13,12 @@ import { HomeComponent } from './home/home.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 //
-import {UserModule} from './user/user.module'
+import {UserModule} from './user/user.module';
+import { MyheroesComponent } from './myheroes/myheroes.component'
+// aui
+import { ButtonModule,InputModule } from '@alauda/ui';
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessageComponent } from './message/message.component';
 
 
 @NgModule({
@@ -22,7 +27,10 @@ import {UserModule} from './user/user.module'
     HeroesComponent,
     HomeComponent,
     FirstComponent,
-    SecondComponent
+    SecondComponent,
+    MyheroesComponent,
+    HeroDetailComponent,
+    MessageComponent
   ],
   // 声明组件需要的模块
   imports: [
@@ -31,7 +39,10 @@ import {UserModule} from './user/user.module'
     FormsModule,
     ReactiveFormsModule,
     //
-    UserModule
+    UserModule,
+    // aui
+    ButtonModule,
+    InputModule
   ],
   //
   providers: [ListService],

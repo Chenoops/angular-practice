@@ -1,6 +1,14 @@
 import { Injectable } from '@angular/core';
 import { UserModule } from '../user/user.module'
 
+import {Hero} from '../hero'
+import {HEROES} from '../mock-hero'
+
+import { Observable,of } from 'rxjs'
+import { observableToBeFn } from 'rxjs/internal/testing/TestScheduler.js';
+
+import { MessageService } from '../message.service';
+
 
 @Injectable({
   // 指定 Angular 应该在根注入器中提供该服务。 null/模块名
@@ -8,8 +16,9 @@ import { UserModule } from '../user/user.module'
   // providedIn: UserModule
 })
 export class ListService {
-// 这个构造函数要求注入一个ListService类的实例，并把它存到名为ListService的私有属性中。
-  constructor() { }
+  constructor(
+    public messageService: MessageService
+  ) { }
   list: Array<string> = ['react','angular','vue']
   getList() {
     return this.list
@@ -17,5 +26,13 @@ export class ListService {
   addList(str:string) {
     this.list.push(str)
   }
+  // getHero(): Hero[] {
+  //   return HEROES
+  // }
 
+  getHero(): Observable<Hero[]> {
+    const hero = of(HEROES)
+    this.messageService.add('heroService: fetched heroes')
+    return hero
+  }
 }
